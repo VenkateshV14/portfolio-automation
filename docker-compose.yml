@@ -15,17 +15,19 @@ services:
       - backend
 
   frontend-app1:
-    image: petercephas52/portfolio-app:latest
+    build:
+      context: ./frontend
     container_name: frontend-app1
 
   frontend-app2:
-    image: petercephas52/portfolio-app:latest
+    build:
+      context: ./frontend
     container_name: frontend-app2
 
   frontend-app3:
-    image: petercephas52/portfolio-app:latest
+    build:
+      context: ./frontend
     container_name: frontend-app3
-
   backend:
     build:
       context: ./backend
