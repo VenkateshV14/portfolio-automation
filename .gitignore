@@ -1,20 +1,20 @@
-# Node dependencies (all levels)
-**/node_modules
-/.pnp
+# Node dependencies (for all directories)
+**/node_modules/
+.pnp
 .pnp.js
 
 # Testing
-/coverage
+**/coverage/
 
-# Production build
-/build
+# Production build (React)
+**/build/
 
-# Environment variable files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Environment variable files (both frontend & backend)
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
 
 # Logs
 npm-debug.log*
