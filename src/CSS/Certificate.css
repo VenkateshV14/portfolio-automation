@@ -1,0 +1,111 @@
+/* Certificate Section */
+.certificate-section {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(to right, #0b1622, #0d2538);
+  color: white;
+}
+
+/* Heading */
+.certificate-section h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #00e5ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 229, 255, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Certificate Grid */
+.certificate-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Certificate Card */
+.certificate-card {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.certificate-card h3 {
+  font-size: 20px;
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.view-cert-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  width: 80%;
+  color: #0b1622;
+  background: #00e5ff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.view-cert-btn:hover {
+  background: #b3ebe5;
+  color: #0b1622;
+}
+
+/* Add space between buttons */
+.button-space {
+  margin: 10px 0;
+}
+
+/* Hover Effect */
+.certificate-card:hover {
+  transform: scale(1.05);
+  color: #0b1622;
+}
+
+.certificate-card:hover h3 {
+  color: #00e5ff;
+}
+
+.certificate-card:hover p {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificate-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .certificate-card {
+    width: 90%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

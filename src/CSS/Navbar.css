@@ -1,0 +1,165 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: linear-gradient(to right, #081c2d, #0b2c48);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out;
+    position: relative;
+    z-index: 1002;
+}
+
+/* Light Mode */
+.navbar.light {
+    background: #ffffff;
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    color: #00bcd4;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Dark Mode Navbar */
+.navbar.dark .nav-links a {
+    color: #e0f7fa;
+}
+
+.navbar.dark .nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Light Mode Navbar */
+.navbar.light .nav-links a {
+    color: #222;
+}
+
+.navbar.light .nav-links a:hover {
+    color: #0084a8;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #00bcd4;
+    color: white;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 183, 255, 0.3);
+}
+
+.dark-mode-toggle:hover {
+    background: #0084a8;
+    transform: translateY(-2px);
+}
+
+/* Menu Toggle Button (Hamburger Icon) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1003;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* When menu is open, animate toggler */
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mobile Menu */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(8, 28, 45, 0.95);
+        padding: 20px 0;
+        transform: translateY(-120%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Show menu when open */
+    .nav-links.open {
+        transform: translateY(0);
+    }
+
+    /* Links */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        color: #e0f7fa;
+        font-weight: bold;
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links li:hover {
+        background: rgba(0, 188, 212, 0.3);
+    }
+
+    /* Light Mode Navbar */
+    .navbar.light .nav-links a {
+        color: #333;
+        /* Darker color for better visibility */
+    }
+
+    .navbar.light .nav-links a:hover {
+        color: #0084a8;
+    }
+}

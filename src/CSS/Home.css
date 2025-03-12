@@ -1,0 +1,194 @@
+/* Home Section */
+.home {
+  padding: 40px 10%;
+  /* Reduced padding to move content up */
+  background: linear-gradient(to right, #0a192f, #112240);
+  color: #e0f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  /* Slightly reduced height */
+}
+
+/* Flexbox Container */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+  position: relative;
+  top: -30px;
+  /* Moves everything up slightly */
+}
+
+/* Container for profile image */
+.image-container {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* Rotating Gradient Border */
+.image-container::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: conic-gradient(#9eea91, #fdfdfd, #00bcd4, #ffffff);
+  animation: rotateBorder 4s linear infinite;
+  z-index: 1;
+}
+
+/* Rotating Border Animation */
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Content Container */
+.content-container {
+  flex: 2;
+  text-align: left;
+  padding-left: 30px;
+  position: relative;
+  top: -20px;
+  /* Moves text slightly up */
+}
+
+.content-container h1 {
+  font-size: 2.7em;
+  font-weight: 700;
+  color: #00bcd4;
+}
+
+.content-container p {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.resume-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  /* Ensures text and icons align properly */
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* Space between icon and text */
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0px 5px 15px rgba(0, 183, 255, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #00b4d8, #48cae4);
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px rgba(0, 183, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    top: -20px;
+    /* Moves up slightly */
+  }
+
+  .image-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profile-img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .image-container::before {
+    width: 270px;
+    height: 270px;
+  }
+
+  .content-container {
+    padding-left: 0;
+    text-align: center;
+    top: -10px;
+  }
+
+  .resume-buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .image-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-container::before {
+    width: 210px;
+    height: 210px;
+  }
+
+  .content-container h1 {
+    font-size: 1.8em;
+  }
+
+  .content-container p {
+    font-size: 1em;
+  }
+
+  .resume-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
