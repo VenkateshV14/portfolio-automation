@@ -22,7 +22,7 @@ function Contact() {
     setSuccessMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch("http://localhost:5001/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,16 +52,16 @@ function Contact() {
 
       {/* Social Icons */}
       <div className="social-icons">
-        <a href="https://github.com/VenkateshV14" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
           <FaGithub className="icon github" />
         </a>
-        <a href="https://www.linkedin.com/in/venky-venkatesh/" target="_blank" rel="noopener noreferrer">
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="icon linkedin" />
         </a>
-        <a href="mailto:petercephas52@gmail.com.com">
+        <a href="mailto:sharvanik@gmail.com">
           <FaEnvelope className="icon email" />
         </a>
-        <a href="https://wa.me/7013697300" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/8247685019" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className="icon whatsapp" />
         </a>
       </div>
