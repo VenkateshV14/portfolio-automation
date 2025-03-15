@@ -35,7 +35,7 @@ Icon?
 *.tfstate.backup
 .terraform/
 .terraform.lock.hcl
-./portfolio-key.pem
+/terraform/portfolio-key.pem
 
 # Terraform override and sensitive files
 override.tf

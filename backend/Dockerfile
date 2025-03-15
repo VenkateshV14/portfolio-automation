@@ -1,16 +1,19 @@
-# Use a lightweight Node.js image
-FROM node:18-alpine
+# Use Node.js LTS version
+FROM node:18
 
-# Set working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy backend files
-COPY . .
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Expose the backend port (change if needed)
+# Copy rest of the backend files
+COPY . .
+
+# Expose the port your server runs on
 EXPOSE 5001
 
 # Start the backend server
