@@ -7,17 +7,15 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// ✅ Root route to verify backend is alive
 app.get("/", (req, res) => {
   res.send("Backend is up and running 🚀");
 });
 
-// Nodemailer Transporter Configuration
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER, // Your email
-    pass: process.env.EMAIL_PASS, // Your Google App Password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -26,7 +24,7 @@ app.post("/send", (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER, // Send to your own email
+    to: process.env.EMAIL_USER,
     subject: `New Contact Message from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };
@@ -40,4 +38,8 @@ app.post("/send", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
+});
