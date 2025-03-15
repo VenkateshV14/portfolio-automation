@@ -7,6 +7,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// ✅ Root route to verify backend is alive
+app.get("/", (req, res) => {
+  res.send("Backend is up and running 🚀");
+});
+
 // Nodemailer Transporter Configuration
 const transporter = nodemailer.createTransport({
   service: "gmail",
