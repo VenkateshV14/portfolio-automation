@@ -1,7 +1,7 @@
 import React from "react";
 import "../CSS/Skills.css";
 import {
-  FaAws, FaLinux, FaDocker, FaGitAlt, FaCode, FaCubes
+  FaAws, FaLinux, FaDocker, FaGitAlt
 } from "react-icons/fa";
 import {
   SiJenkins, SiKubernetes, SiTerraform, SiAnsible
