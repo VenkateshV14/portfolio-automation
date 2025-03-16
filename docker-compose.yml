@@ -2,17 +2,13 @@ version: "3.8"
 
 services:
   frontend:
-    build: ./frontend
-    container_name: react-frontend
+    image: petercephas52/portfolio-frontend:latest
     ports:
       - "80:80"
-    depends_on:
-      - backend
+    restart: always
 
   backend:
     image: petercephas52/portfolio-backend:latest
-    container_name: node-backend
     ports:
       - "5001:5001"
-    env_file:
-      - ./backend/.env
+    restart: always

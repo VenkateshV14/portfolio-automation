@@ -1,18 +1,20 @@
-FROM node:18 AS build
+# build stage
+FROM node:18 AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY frontend/package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY frontend/ .
 
 RUN npm run build
 
+# production stage
 FROM nginx:alpine
 
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 EXPOSE 80
 
