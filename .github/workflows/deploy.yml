@@ -7,6 +7,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_API_URL: http://34.201.251.67:5001
 
     steps:
       - name: Checkout Repo
@@ -29,6 +31,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio-frontend:latest
           platforms: linux/amd64
+          build-args: |
+            REACT_APP_API_URL=${{ env.REACT_APP_API_URL }}
 
       - name: Build & Push Backend Image
         uses: docker/build-push-action@v5
