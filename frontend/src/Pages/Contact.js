@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../CSS/Contact.css";
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
@@ -11,18 +11,45 @@ function Contact() {
 
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    const { name, email, message } = formData;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      setErrorMessage("All fields are required.");
+      return false;
+    }
+
+    if (!emailRegex.test(email)) {
+      setErrorMessage("Please enter a valid email address.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setSuccessMessage("");
+    setErrorMessage("");
+
+    if (!validateForm()) return;
+
+    setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/send`, {
+      const API_URL = process.env.REACT_APP_API_URL;
+      if (!API_URL) {
+        throw new Error("API URL not configured");
+      }
+      console.log("API_URL:", API_URL);
+      const response = await fetch(`${API_URL}/send`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,18 +60,34 @@ function Contact() {
       const data = await response.json();
 
       if (response.ok) {
-        setSuccessMessage("Message sent successfully! Thankyou for contacting me, I will get back to you soon...");
+        setSuccessMessage(
+          "✅ Message sent successfully! Thank you for contacting me, I will get back to you soon..."
+        );
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert("Failed to send message: " + data.error);
+        setErrorMessage("❌ Failed to send message: " + data.error);
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Something went wrong. Please try again.");
+      setErrorMessage("⚠️ Something went wrong. Please try again later.");
     } finally {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => setSuccessMessage(""), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
+
+  useEffect(() => {
+    if (errorMessage) {
+      const timer = setTimeout(() => setErrorMessage(""), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [errorMessage]);
 
   return (
     <section className="contact" id="contacts">
@@ -97,6 +140,7 @@ function Contact() {
       </form>
 
       {successMessage && <p className="success-message">{successMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
     </section>
   );
 }
