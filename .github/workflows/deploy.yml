@@ -54,5 +54,5 @@ jobs:
             git pull origin main
             docker compose pull
             docker compose up -d
-            docker image prune -af --filter "until=24h"
+            docker image prune -af --filter "until=1h"
             docker system prune -af --volumes
