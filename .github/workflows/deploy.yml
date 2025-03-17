@@ -49,6 +49,9 @@ jobs:
             git clone https://github.com/VenkateshV14/my-portfolio.git
             cd my-portfolio
             echo "REACT_APP_API_URL=https://venky-devops-engineer-vde.xyz" > frontend/.env
+            echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" > backend/.env
+            echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> backend/.env
+            echo "PORT=5001" >> backend/.env
             docker compose pull
             docker compose up -d
             docker image prune -af --filter "until=1h"

@@ -51,17 +51,24 @@ This is a real-time **DevOps portfolio project** built using **React (frontend)*
 ```bash
 my-portfolio/
 │
-├── frontend/               # React frontend
+├── frontend/               
 │   ├── src/
 │   ├── public/
 │   └── Dockerfile
+│   └── package.json
 │
-├── backend/                # Node.js backend with email service
+├── backend/                
 │   ├── server.js
 │   └── Dockerfile
+│   └── package.json
+├── terraform/                
+│   ├── main.tf
+│   └── variables.tf
+│   └── outputs.tf
 │
-├── .github/workflows/      # GitHub Actions CI/CD
+├── .github/workflows/
 │   └── deploy.yml
 │
 ├── docker-compose.yml
 └── README.md
+└── screenshorts
