@@ -44,11 +44,9 @@ function Contact() {
     setLoading(true);
 
     try {
-      const API_URL = process.env.REACT_APP_API_URL;
-      if (!API_URL) {
-        throw new Error("API URL not configured");
-      }
+      const API_URL = process.env.REACT_APP_API_URL || "https://venky-devops-engineer-vde.xyz";
       console.log("API_URL:", API_URL);
+
       const response = await fetch(`${API_URL}/send`, {
         method: "POST",
         headers: {
@@ -60,9 +58,7 @@ function Contact() {
       const data = await response.json();
 
       if (response.ok) {
-        setSuccessMessage(
-          "✅ Message sent successfully! Thank you for contacting me, I will get back to you soon..."
-        );
+        setSuccessMessage("✅Message sent successfully! Thank you for contacting me, I will get back to you soon...");
         setFormData({ name: "", email: "", message: "" });
       } else {
         setErrorMessage("❌ Failed to send message: " + data.error);
@@ -70,7 +66,8 @@ function Contact() {
     } catch (error) {
       console.error("Error sending message:", error);
       setErrorMessage("⚠️ Something went wrong. Please try again later.");
-    } finally {
+    }
+    finally {
       setLoading(false);
     }
   };
