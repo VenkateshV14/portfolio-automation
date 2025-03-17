@@ -28,6 +28,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/portfolio-frontend:latest
           platforms: linux/amd64
+          build-args: |
+            REACT_APP_API_URL=https://venky-devops-engineer-vde.xyz
 
       - name: Build & Push Backend Image
         uses: docker/build-push-action@v5
