@@ -95,19 +95,17 @@ function Contact() {
 
       {/* Social Icons */}
       <div className="social-icons">
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="icon github" />
-        </a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/venky-venkatesh" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="icon linkedin" />
         </a>
-        <a href="mailto:sharvanik@gmail.com">
-          <FaEnvelope className="icon email" />
-        </a>
-        <a href="https://wa.me/8247685019" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/7013697300" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className="icon whatsapp" />
         </a>
+        <a href="https://github.com/VenkateshV14" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="icon github" />
+        </a>
       </div>
+      <h4>Interested in collaborating? Let's connect and discuss opportunities.</h4>
 
       {/* Contact Form */}
       <form className="contact-form" onSubmit={handleSubmit}>

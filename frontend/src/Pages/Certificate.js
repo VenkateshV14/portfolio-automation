@@ -1,7 +1,5 @@
 import React from "react";
 import "../CSS/Certificate.css";
-import awsCert from "../Assets/Aws.pdf"; // AWS certificate PDF
-import terraformCert from "../Assets/Terraform-cert.pdf"; // Terraform certificate PDF
 
 function Certificate() {
   const certificates = [
@@ -10,7 +8,7 @@ function Certificate() {
       issuedBy: "Amazon Web Services (AWS)",
       from: "August-25-2024",
       to: "August-25-2027",
-      certLink: awsCert, // Local PDF file
+      certLink: "https://drive.google.com/file/d/1cIVtsRIcvV359cbiG7NPcZA7LLUozeva/view?usp=drive_link",
       badgeLink: "https://www.credly.com/badges/33bc6542-469c-40ce-b811-e39c56d6c646/public_url",
     },
     {
@@ -18,14 +16,14 @@ function Certificate() {
       issuedBy: "HashiCorp",
       from: "July-25-2024",
       to: "July-25-2026",
-      certLink: terraformCert, // Local PDF file
+      certLink: "https://drive.google.com/file/d/1TG4xKTD1A6Fcph0tTgXNVB6UReVTn74V/view?usp=drive_link",
       badgeLink: "https://www.credly.com/badges/54acb72f-8c24-4605-8d44-89bfa618dbf9/public_url",
     },
     {
       title: "Udemy Course Completion Certifications",
       issuedBy: "Udemy",
       date: "Permanent",
-      certLink: "https://github.com/VenkateshV14/udemy-certificates.git", // Only GitHub link
+      certLink: "https://github.com/VenkateshV14/udemy-certificates.git",
     },
   ];
 
@@ -56,7 +54,7 @@ function Certificate() {
               rel="noopener noreferrer"
               className="view-cert-btn"
             >
-              View Certificate
+              {cert.issuedBy === "Udemy" ? "View All Certificates" : "View Certificate"}
             </a>
 
             {/* Space between buttons */}

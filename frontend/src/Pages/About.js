@@ -17,8 +17,8 @@ function About() {
     <section className="about" id="abouts">
       <h1>About Me</h1>
       <p>
-        I'm a passionate DevOps and Cloud enthusiast with hands-on experience in AWS, Linux system administration, Docker, and Terraform. 
-        I enjoy automating infrastructure, streamlining deployment pipelines, and working on real-world projects that improve scalability and reliability. 
+        I'm a passionate DevOps and Cloud enthusiast with hands-on experience in AWS, Linux system administration, Docker, and Terraform.
+        I enjoy automating infrastructure, streamlining deployment pipelines, and working on real-world projects that improve scalability and reliability.
         I'm always eager to learn new tools and technologies that make development and operations more efficient.
       </p>
 
@@ -51,8 +51,9 @@ function About() {
               {activeModal === "personal" && (
                 <p>
                   <strong>Name:</strong> Vakamudula Venkatesh <br />
+                  <strong>Cell:</strong> 7013697300 <br />
                   <strong>D.O.B:</strong> April-14-2001 <br />
-                  <strong>Status:</strong> Unmarried <br />
+                  <strong>📍Location:</strong> India 🌍 <br />
                 </p>
               )}
               {activeModal === "education" && (

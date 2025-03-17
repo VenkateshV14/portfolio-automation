@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineEye, AiOutlineDownload } from "react-icons/ai"; // Import icons
 import profileImage from "../Assets/port-pic.jpeg";
-import resumeFile from "../Assets/Sharvani__Resume.pdf";
+import resumeFile from "../Assets/resume.pdf";
 import "../CSS/Home.css";
 
 function Home() {
@@ -18,15 +18,15 @@ function Home() {
         <div className="content-container">
           <h1>Hello, I'm Venkatesh</h1>
           <p>
-            Aspiring DevOps Engineer with a passion for automation, cloud
-            computing, and CI/CD pipelines.
+            DevOps Engineer passionate about building scalable cloud infrastructure, automating workflows, and implementing robust CI/CD pipelines.
           </p>
 
+
           <div className="resume-buttons">
-            <a href={resumeFile} target="_blank" rel="noopener noreferrer" className="btn">
+            <a href="https://drive.google.com/file/d/1S8vouCWIk0YW_wk7IRwrzPT-YPtj6NNu/view?usp=sharing" rel="noopener noreferrer" className="btn">
               <AiOutlineEye className="icon" /> View CV
             </a>
-            <a href={resumeFile} download="Sharvani__Resume.pdf" className="btn">
+            <a href={resumeFile} download="resume.pdf" className="btn">
               <AiOutlineDownload className="icon" /> Download CV
             </a>
           </div>

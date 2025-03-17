@@ -31,6 +31,14 @@ function Skills() {
             <li><span>System Management</span></li>
           </ul>
         </div>
+        <div className="skill-card">
+          <FaGitAlt className="skill-icon" />
+          <h3>Git & GitHub</h3>
+          <ul className="skill-list">
+            <li><span>Version Control</span></li>
+            <li><span>GitHub Actions</span></li>
+          </ul>
+        </div>
 
         <div className="skill-card">
           <FaDocker className="skill-icon" />
@@ -38,6 +46,22 @@ function Skills() {
           <ul className="skill-list">
             <li><span>Containers & Images</span></li>
             <li><span>Docker Compose</span></li>
+          </ul>
+        </div>
+        <div className="skill-card">
+          <SiAnsible className="skill-icon" />
+          <h3>Ansible</h3>
+          <ul className="skill-list">
+            <li><span>Configuration</span></li>
+            <li><span>Playbooks</span></li>
+          </ul>
+        </div>
+        <div className="skill-card">
+          <SiTerraform className="skill-icon" />
+          <h3>Terraform</h3>
+          <ul className="skill-list">
+            <li><span>Infrastructure as Code</span></li>
+            <li><span>Provisioning</span></li>
           </ul>
         </div>
 
@@ -56,33 +80,6 @@ function Skills() {
           <ul className="skill-list">
             <li><span>Pipeline Automation</span></li>
             <li><span>Deployment</span></li>
-          </ul>
-        </div>
-
-        <div className="skill-card">
-          <SiAnsible className="skill-icon" />
-          <h3>Ansible</h3>
-          <ul className="skill-list">
-            <li><span>Configuration Mgmt</span></li>
-            <li><span>Playbooks</span></li>
-          </ul>
-        </div>
-
-        <div className="skill-card">
-          <SiTerraform className="skill-icon" />
-          <h3>Terraform</h3>
-          <ul className="skill-list">
-            <li><span>Infrastructure as Code</span></li>
-            <li><span>Provisioning</span></li>
-          </ul>
-        </div>
-
-        <div className="skill-card">
-          <FaGitAlt className="skill-icon" />
-          <h3>Git & GitHub</h3>
-          <ul className="skill-list">
-            <li><span>Version Control</span></li>
-            <li><span>Collaboration</span></li>
           </ul>
         </div>
       </div>
