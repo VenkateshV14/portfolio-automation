@@ -3,12 +3,12 @@ version: "3.8"
 services:
   frontend:
     image: petercephas52/portfolio-frontend:latest
-    ports:
-      - "3000:80"
+    container_name: portfolio-frontend
     restart: always
 
   backend:
     image: petercephas52/portfolio-backend:latest
-    ports:
-      - "5001:5001"
+    container_name: portfolio-backend
+    env_file:
+      - ./backend/.env
     restart: always
