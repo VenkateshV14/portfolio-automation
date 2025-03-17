@@ -50,8 +50,9 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            rm -rf my-portfolio
+            git clone https://github.com/VenkateshV14/my-portfolio.git
             cd my-portfolio
-            git pull origin main
             docker compose pull
             docker compose up -d
             docker image prune -af --filter "until=1h"
