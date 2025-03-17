@@ -4,11 +4,15 @@ services:
   frontend:
     image: petercephas52/portfolio-frontend:latest
     container_name: portfolio-frontend
+    ports:
+      - "3000:80"
     restart: always
 
   backend:
     image: petercephas52/portfolio-backend:latest
     container_name: portfolio-backend
+    ports:
+      - "5001:5001"
     env_file:
       - ./backend/.env
     restart: always
