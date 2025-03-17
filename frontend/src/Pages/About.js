@@ -53,7 +53,7 @@ function About() {
                   <strong>Name:</strong> Vakamudula Venkatesh <br />
                   <strong>Cell:</strong> 7013697300 <br />
                   <strong>D.O.B:</strong> April-14-2001 <br />
-                  <strong>📍Location:</strong> India 🌍 <br />
+                  <strong>Location:</strong> India 🌍 <br />
                 </p>
               )}
               {activeModal === "education" && (
