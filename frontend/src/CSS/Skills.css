@@ -2,7 +2,8 @@
 .skills {
   text-align: center;
   padding: 50px;
-  background: linear-gradient(to right, #0b1622, #0d2538); /* Dark cyan gradient */
+  background: linear-gradient(to right, #0b1622, #0d2538);
+  /* Dark cyan gradient */
   color: white;
 }
 
@@ -10,7 +11,8 @@
 .skills h1 {
   font-size: 36px;
   margin-bottom: 30px;
-  color: #00e5ff; /* Neon cyan */
+  color: #00e5ff;
+  /* Neon cyan */
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 2px 2px 5px rgba(0, 229, 255, 0.5);
@@ -41,7 +43,8 @@
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 229, 255, 0.3);
   transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
+  cursor: default;
+  /* ✅ Change cursor to default */
   position: relative;
   overflow: hidden;
 }
@@ -78,7 +81,8 @@
 /* Hover Effects */
 .skill-card:hover {
   transform: scale(1.1);
-  background: #b3ebe5; /* Neon cyan */
+  background: #b3ebe5;
+  /* Neon cyan */
   color: #0b1622;
   box-shadow: 0 8px 25px rgba(0, 229, 255, 0.6);
 }
@@ -107,7 +111,8 @@
 
 /* Skill Title */
 .skill-card h3 {
-  color: #00e5ff; /* Cyan */
+  color: #00e5ff;
+  /* Cyan */
   font-size: 22px;
   margin-bottom: 8px;
   transition: color 0.3s ease-in-out;
@@ -123,7 +128,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .skill-card {
     width: 200px;
     height: 200px;
@@ -140,6 +145,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

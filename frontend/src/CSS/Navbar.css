@@ -1,42 +1,57 @@
 /* General Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 15px 25px;
+    padding: 10px 20px;
     background: linear-gradient(to right, #081c2d, #0b2c48);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease-in-out;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1002;
 }
 
-/* Light Mode */
-.navbar.light {
-    background: #ffffff;
+/* Navbar Header (Title & Toggle Button) */
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
 }
 
 /* Logo */
 .logo {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     color: #00bcd4;
     text-transform: uppercase;
     transition: transform 0.3s ease-in-out;
-}
-
-.logo:hover {
-    transform: scale(1.1);
+    margin-left: 10px;
 }
 
 /* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 60px;
+    gap: 80px;
+    margin-left: -1000px;
+    /* Keeps navbar left-aligned */
+    white-space: nowrap;
 }
 
+/* Fix for Mobile Mode */
+@media (max-width: 768px) {
+    .nav-links {
+        margin-left: 0px !important;
+        /* Reset margin for mobile */
+    }
+}
+
+/* Navigation Links Style */
 .nav-links li {
     display: inline;
 }
@@ -44,68 +59,55 @@
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
+    color: #e0f7fa;
     transition: color 0.3s ease-in-out;
 }
 
-/* Dark Mode Navbar */
-.navbar.dark .nav-links a {
-    color: #e0f7fa;
-}
-
-.navbar.dark .nav-links a:hover {
+.nav-links a:hover {
     color: #00bcd4;
 }
 
-/* Light Mode Navbar */
-.navbar.light .nav-links a {
-    color: #222;
+/* Prevent Content Overlapping Navbar */
+body {
+    padding-top: 70px;
 }
 
-.navbar.light .nav-links a:hover {
-    color: #0084a8;
-}
-
-/* Dark Mode Toggle */
-.dark-mode-toggle {
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    background: #00bcd4;
-    color: white;
-    border-radius: 20px;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-    box-shadow: 0px 5px 15px rgba(0, 183, 255, 0.3);
-}
-
-.dark-mode-toggle:hover {
-    background: #0084a8;
-    transform: translateY(-2px);
-}
-
-/* Menu Toggle Button (Hamburger Icon) */
+/* Menu Toggle Button */
 .menu-toggle {
     display: none;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
     background: none;
     border: none;
     color: white;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    z-index: 1003;
+    margin-right: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* When menu is open, animate toggler */
 .menu-toggle:hover {
     transform: scale(1.1);
 }
 
-/* Responsive Styles */
+/* ✅ Mobile Mode - Fix for Missing Items */
 @media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    /* Navbar Header (Fix Title + Toggle Button) */
+    .navbar-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to right, #081c2d, #0b2c48);
+        padding: 10px 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 1003;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -116,32 +118,39 @@
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 60px;
+        top: 55px;
         left: 0;
         width: 100%;
+        height: auto;
+        /* ✅ Allow menu to expand fully */
         background: rgba(8, 28, 45, 0.95);
         padding: 20px 0;
+        /* ✅ Increased padding for full visibility */
         transform: translateY(-120%);
         transition: transform 0.4s ease-in-out;
         z-index: 1000;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
-    /* Show menu when open */
+    /* ✅ Make sure all items are visible */
     .nav-links.open {
         transform: translateY(0);
+        height: auto;
+        /* ✅ Expands dynamically */
+        padding-bottom: 20px;
+        /* ✅ Prevents cut-off */
     }
 
     /* Links */
     .nav-links li {
         width: 100%;
         text-align: center;
-        padding: 15px 0;
+        padding: 12px 0;
         transition: background 0.3s ease-in-out;
     }
 
     .nav-links a {
-        font-size: 20px;
+        font-size: 18px;
         color: #e0f7fa;
         font-weight: bold;
         width: 100%;
@@ -151,15 +160,5 @@
 
     .nav-links li:hover {
         background: rgba(0, 188, 212, 0.3);
-    }
-
-    /* Light Mode Navbar */
-    .navbar.light .nav-links a {
-        color: #333;
-        /* Darker color for better visibility */
-    }
-
-    .navbar.light .nav-links a:hover {
-        color: #0084a8;
     }
 }

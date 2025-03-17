@@ -53,6 +53,7 @@ jobs:
             rm -rf my-portfolio
             git clone https://github.com/VenkateshV14/my-portfolio.git
             cd my-portfolio
+            echo "REACT_APP_API_URL=http://34.201.251.67:5001" > frontend/.env
             docker compose pull
             docker compose up -d
             docker image prune -af --filter "until=1h"
