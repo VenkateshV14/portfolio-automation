@@ -116,13 +116,13 @@
 /* Scroll Indicator (Mobile Only) */
 .scroll-indicator {
   position: absolute;
-  bottom: 50px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px;
   font-weight: bold;
   color: #00bcd4;
-  animation: fadeInOut 1.5s ease-in-out 10 forwards;
+  animation: fadeInOut 1.5s ease-in-out 7 forwards;
   display: none;
 }
 
