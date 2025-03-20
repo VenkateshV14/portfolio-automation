@@ -73,7 +73,7 @@ body {
     padding-top: 70px;
 }
 
-/* Menu Toggle Button */
+/* ✅ Move the Toggle Button Slightly Left */
 .menu-toggle {
     display: none;
     font-size: 22px;
@@ -81,7 +81,8 @@ body {
     background: none;
     border: none;
     color: white;
-    margin-right: 10px;
+    margin-right: 25px;
+    /* ✅ Move left */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -110,6 +111,8 @@ body {
 
     .menu-toggle {
         display: block;
+        margin-right: 35px;
+        /* ✅ Move even more left on mobile */
     }
 
     /* Mobile Menu */

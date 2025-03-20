@@ -14,10 +14,18 @@ function Navbar() {
     setMenuOpen(false);
   };
 
+  // Function to scroll to top when "My Portfolio" is clicked
+  const goToHome = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+    closeMenu(); // Close the menu in mobile mode
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-header">
-        <h2 className="logo">My Portfolio</h2>
+        <h2 className="logo" onClick={goToHome} style={{ cursor: "pointer" }}>
+          My Portfolio
+        </h2>
         {/* Menu Toggle Button (Visible only on mobile) */}
         <button className="menu-toggle" onClick={toggleMenu}>
           {menuOpen ? "✖" : "☰"}

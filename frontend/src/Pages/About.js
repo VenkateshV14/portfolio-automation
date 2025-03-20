@@ -17,9 +17,20 @@ function About() {
     <section className="about" id="abouts">
       <h1>About Me</h1>
       <p>
-        I'm a passionate DevOps and Cloud enthusiast with hands-on experience in AWS, Linux system administration, Docker, and Terraform.
-        I enjoy automating infrastructure, streamlining deployment pipelines, and working on real-world projects that improve scalability and reliability.
-        I'm always eager to learn new tools and technologies that make development and operations more efficient.
+        I am a dedicated <strong>DevOps and Cloud Engineer</strong> with a strong passion for
+        <strong> automation, infrastructure management, and continuous integration/deployment (CI/CD)</strong>.
+        With hands-on experience in <strong>AWS, Terraform, Docker, Kubernetes, and Linux</strong>, I specialize in
+        <strong> building scalable, secure, and highly available cloud environments</strong>.
+        I enjoy working on real-world projects that bridge the gap between
+        <strong> development and operations</strong>, ensuring seamless deployments and optimized workflows.
+
+        My expertise includes designing <strong>Infrastructure as Code (IaC) solutions</strong>,
+        configuring <strong>containerized applications</strong>, and implementing <strong>cloud-native architectures</strong>.
+        I am always eager to explore emerging technologies, optimize existing systems, and contribute to
+        <strong> high-performance DevOps pipelines</strong>.
+
+        I believe in <strong>continuous learning and collaboration</strong>, and I am excited to take on new challenges
+        that push the boundaries of cloud engineering and automation. 🚀
       </p>
 
       {/* Buttons */}

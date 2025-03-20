@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Contact.css";
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 function Contact() {
   const [formData, setFormData] = useState({
