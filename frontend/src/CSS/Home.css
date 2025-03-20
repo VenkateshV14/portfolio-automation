@@ -1,14 +1,13 @@
 /* Home Section */
 .home {
   padding: 40px 10%;
-  /* Reduced padding to move content up */
   background: linear-gradient(to right, #0a192f, #112240);
   color: #e0f7fa;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 85vh;
-  /* Slightly reduced height */
+  position: relative;
 }
 
 /* Flexbox Container */
@@ -21,10 +20,9 @@
   gap: 40px;
   position: relative;
   top: -30px;
-  /* Moves everything up slightly */
 }
 
-/* Container for profile image */
+/* Profile Image */
 .image-container {
   position: relative;
   display: inline-flex;
@@ -33,7 +31,6 @@
   border-radius: 50%;
 }
 
-/* Profile Image */
 .profile-img {
   width: 340px;
   height: 340px;
@@ -55,7 +52,6 @@
   z-index: 1;
 }
 
-/* Rotating Border Animation */
 @keyframes rotateBorder {
   0% {
     transform: rotate(0deg);
@@ -73,7 +69,6 @@
   padding-left: 30px;
   position: relative;
   top: -20px;
-  /* Moves text slightly up */
 }
 
 .content-container h1 {
@@ -94,7 +89,6 @@
   gap: 15px;
   flex-wrap: wrap;
   align-items: center;
-  /* Ensures text and icons align properly */
 }
 
 .btn {
@@ -102,7 +96,6 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  /* Space between icon and text */
   padding: 12px 30px;
   background: linear-gradient(135deg, #0077b6, #00b4d8);
   color: white;
@@ -120,6 +113,30 @@
   box-shadow: 0px 8px 18px rgba(0, 183, 255, 0.4);
 }
 
+/* Scroll Indicator (Mobile Only) */
+.scroll-indicator {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #00bcd4;
+  animation: fadeInOut 1.5s ease-in-out 5 forwards;
+  display: none;
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .home-container {
@@ -127,22 +144,6 @@
     text-align: center;
     gap: 30px;
     top: -20px;
-    /* Moves up slightly */
-  }
-
-  .image-container {
-    width: 280px;
-    height: 280px;
-  }
-
-  .profile-img {
-    width: 260px;
-    height: 260px;
-  }
-
-  .image-container::before {
-    width: 270px;
-    height: 270px;
   }
 
   .content-container {
@@ -190,5 +191,10 @@
     width: 100%;
     text-align: center;
     padding: 10px 0;
+  }
+
+  /* Show scroll indicator only on mobile */
+  .scroll-indicator {
+    display: block;
   }
 }

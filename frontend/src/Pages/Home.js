@@ -1,12 +1,13 @@
 import React from "react";
 import { AiOutlineEye, AiOutlineDownload } from "react-icons/ai"; // Import icons
 import profileImage from "../Assets/port-pic.jpeg";
-import resumeFile from "../Assets/resume.pdf";
+import resumeFile from "../Assets/Venkatesh-resume.pdf";
 import "../CSS/Home.css";
 
 function Home() {
   return (
     <section className="home" id="homes">
+      <p className="scroll-indicator">Scroll to see more ↓</p>
       <div className="home-container">
         {/* Left Side - Image */}
         <div className="image-container">
@@ -23,10 +24,10 @@ function Home() {
 
 
           <div className="resume-buttons">
-            <a href="https://drive.google.com/file/d/1S8vouCWIk0YW_wk7IRwrzPT-YPtj6NNu/view?usp=sharing" rel="noopener noreferrer" className="btn">
+            <a href="https://drive.google.com/file/d/1ZwX3TFKE82MNQvVCXTcX7Hw7FxWPyBTW/view?usp=drive_link" rel="noopener noreferrer" className="btn">
               <AiOutlineEye className="icon" /> View CV
             </a>
-            <a href={resumeFile} download="resume.pdf" className="btn">
+            <a href={resumeFile} download="Venkatesh-resume.pdf" className="btn">
               <AiOutlineDownload className="icon" /> Download CV
             </a>
           </div>
