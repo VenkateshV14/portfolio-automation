@@ -70,11 +70,11 @@ function About() {
               {activeModal === "education" && (
                 <>
                   <p>
-                    <strong>Bachelor's in Electronics and Communication Engineering</strong> <br />
+                    <strong>Bachelor's in Electronics and Communication Engineering - 86%</strong> <br />
                     Bharath University, Chennai (2019-2023)
                   </p>
                   <p>
-                    <strong>Intermediate in MPC</strong> <br />
+                    <strong>Intermediate in MPC - 92%</strong> <br />
                     Sri Chaitanya Junior College (2017-2019)
                   </p>
                 </>

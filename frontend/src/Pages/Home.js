@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineEye, AiOutlineDownload } from "react-icons/ai"; // Import icons
 import profileImage from "../Assets/port-pic.jpeg";
-import resumeFile from "../Assets/Venkatesh-resume.pdf";
+import resumeFile from "../Assets/resume.pdf";
 import "../CSS/Home.css";
 
 function Home() {
@@ -24,7 +24,7 @@ function Home() {
 
 
           <div className="resume-buttons">
-            <a href="https://drive.google.com/file/d/1ZwX3TFKE82MNQvVCXTcX7Hw7FxWPyBTW/view?usp=drive_link" rel="noopener noreferrer" className="btn">
+            <a href="https://drive.google.com/file/d/1FOUF2TG3ZuWxTpOCggrI3NjCbktl46KR/view?usp=sharing" rel="noopener noreferrer" className="btn">
               <AiOutlineEye className="icon" /> View CV
             </a>
             <a href={resumeFile} download="Venkatesh-resume.pdf" className="btn">

@@ -11,6 +11,13 @@ function Projects() {
       codeLink: "https://github.com/VenkateshV14/portfolio-automation.git",
     },
     {
+      title: "☁️ AWS Cloud Resume Challenge",
+      description:
+        "Built a serverless backend for my cloud resume using AWS Lambda, API Gateway, and DynamoDB to track visits. Automated infrastructure provisioning and deployments with Terraform and GitHub Actions.",
+      blogLink: "https://aws-cloud-resume-challenge.hashnode.dev/cloud-resume-devops",
+      codeLink: "https://github.com/VenkateshV14/AWS-cloud-resume-challenge-frontend.git",
+    },
+    {
       title: "🚀 3-Tier Microservice Automation",
       description:
         "Containerized and orchestrated three e-commerce microservices using Docker, Kubernetes (EKS), and GitHub Actions CI/CD for seamless deployment.",
@@ -23,13 +30,6 @@ function Projects() {
         "Deployed a static website on AWS S3 bucket, using Infrastructure as Code - Terraform.",
       blogLink: "https://terraform-static-website.hashnode.dev/terraform-s3-static-site",
       codeLink: "https://github.com/VenkateshV14/terraform-s3-website.git",
-    },
-    {
-      title: "☁️ AWS Cloud Resume Challenge",
-      description:
-        "The AWS Cloud Resume Challenge is a hands-on project where you build and deploy a resume website using AWS S3, Lambda, API Gateway, DynamoDB, and CI/CD to showcase cloud and DevOps skills. 🚀",
-      blogLink: "",
-      codeLink: "",
     },
   ];
 
