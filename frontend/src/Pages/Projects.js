@@ -4,11 +4,11 @@ import "../CSS/Projects.css";
 function Projects() {
   const projectData = [
     {
-      title: "🤖 Portfolio Automation",
+      title: "🤖 Chatbot-AI | DevOps Automation on AWS",
       description:
-        "Built a Production-Ready DevOps Portfolio Using React, Node.js, Docker, Terraform & GitHub Actions.",
-      blogLink: "https://portfolio-website-automation.hashnode.dev/devops-portfolio",
-      codeLink: "https://github.com/VenkateshV14/portfolio-automation.git",
+        "Built an end-to-end CI/CD pipeline for a Django chatbot app using Jenkins, Docker, Kubernetes (EKS), Terraform, and Ansible on AWS. Automates code deployment from GitHub to Kubernetes with every push.",
+      blogLink: "https://devops-automation.hashnode.dev/building-an-end-to-end-devops-pipeline-on-aws-with-jenkins-docker-kubernetes-terraform-and-ansible",
+      codeLink: "https://github.com/VenkateshV14/Chat-bot-Ai.git",
     },
     {
       title: "☁️ AWS Cloud Resume Challenge",
@@ -16,6 +16,13 @@ function Projects() {
         "Built a serverless backend for my cloud resume using AWS Lambda, API Gateway, and DynamoDB to track visits. Automated infrastructure provisioning and deployments with Terraform and GitHub Actions.",
       blogLink: "https://aws-cloud-resume-challenge.hashnode.dev/cloud-resume-devops",
       codeLink: "https://github.com/VenkateshV14/AWS-cloud-resume-challenge-frontend.git",
+    },
+    {
+      title: "🤖 Portfolio Automation",
+      description:
+        "Built a Production-Ready DevOps Portfolio Using React, Node.js, Docker, Terraform & GitHub Actions.",
+      blogLink: "https://portfolio-website-automation.hashnode.dev/devops-portfolio",
+      codeLink: "https://github.com/VenkateshV14/portfolio-automation.git",
     },
     {
       title: "🚀 3-Tier Microservice Automation",
