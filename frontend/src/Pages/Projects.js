@@ -7,7 +7,7 @@ function Projects() {
       title: "🤖 Chatbot-AI | DevOps Automation on AWS",
       description:
         "Built an end-to-end CI/CD pipeline for a Django chatbot app using Jenkins, Docker, Kubernetes (EKS), Terraform, and Ansible on AWS. Automates code deployment from GitHub to Kubernetes with every push.",
-      blogLink: "https://devops-automation.hashnode.dev/building-an-end-to-end-devops-pipeline-on-aws-with-jenkins-docker-kubernetes-terraform-and-ansible",
+      blogLink: "https://devops-automation.hashnode.dev/devops-automation",
       codeLink: "https://github.com/VenkateshV14/Chat-bot-Ai.git",
     },
     {
