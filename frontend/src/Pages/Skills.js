@@ -19,7 +19,7 @@ function Skills() {
           <h3>AWS</h3>
           <ul className="skill-list">
             <li><span>AWS Services</span> <FaAws className="skill-item-icon" /></li>
-            <li><span>EC2, S3, IAM</span></li>
+            <li><span>EC2, S3</span></li>
           </ul>
         </div>
 
