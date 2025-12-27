@@ -44,7 +44,7 @@ function Contact() {
     setLoading(true);
 
     try {
-      const API_URL = process.env.REACT_APP_API_URL || "https://venky-devops-engineer.online";
+      const API_URL = process.env.REACT_APP_API_URL || "https://venky-devops-engineer.online/api";
       console.log("API_URL:", API_URL);
 
       const response = await fetch(`${API_URL}/send`, {
