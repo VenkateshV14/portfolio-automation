@@ -1,6 +1,6 @@
 # 🚀 DevOps Portfolio Project
 
-This is a **full-stack DevOps portfolio project** featuring a React frontend and Node.js backend, containerized using Docker, deployed using a GitHub Actions CI/CD pipeline, and hosted on AWS EC2 provisioned through Terraform. The project includes a custom domain with HTTPS support via Let’s Encrypt and NGINX reverse proxy.
+This is a **full-stack DevOps portfolio project** featuring a React frontend and Node.js backend, containerized using Docker, deployed using a GitHub Actions CI/CD pipeline, and hosted on AWS EC2 provisioned through Terraform. The project includes a custom domain with HTTPS support via Let’s Encrypt and NGINX reverse proxy
 
 ## 📊 Workflow:
 ![Flow Chart](./images/flow-chart.png)
