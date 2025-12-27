@@ -9,7 +9,7 @@ This is a **full-stack DevOps portfolio project** featuring a React frontend and
 
 ## 🌐 Live Demo
 
-🔗 [https://venky-devops-engineer-vde.xyz](https://venky-devops-engineer-vde.xyz)
+🔗 [https://venky-devops-engineer.online](https://venky-devops-engineer.online)
 
 ---
 
