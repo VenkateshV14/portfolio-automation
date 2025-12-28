@@ -118,4 +118,4 @@ NGINX acts as a reverse proxy:
 
 - **GitHub**: [https://github.com/VenkateshV14](https://github.com/VenkateshV14)  
 - **LinkedIn**: [https://www.linkedin.com/in/venky-venkatesh](https://www.linkedin.com/in/venky-venkatesh)  
-- **Email**: [petercephas52@gmail.com](mailto:petercephas52@gmail.com)
+- **Email**: [vakamudilavenkatesh@gmail.com](mailto:vakamudilavenkatesh@gmail.com)
