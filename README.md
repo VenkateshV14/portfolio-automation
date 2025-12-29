@@ -116,6 +116,6 @@ NGINX acts as a reverse proxy:
 
 ## 🤝 Connect with Me
 
-- **GitHub**: [https://github.com/VenkateshV14](https://github.com/VenkateshV14)  
+- **GitHub**: [https://www.github.com/VenkateshV14](https://github.com/VenkateshV14)  
 - **LinkedIn**: [https://www.linkedin.com/in/venky-venkatesh](https://www.linkedin.com/in/venky-venkatesh)  
 - **Email**: [vakamudilavenkatesh@gmail.com](mailto:vakamudilavenkatesh@gmail.com)
