@@ -24,7 +24,7 @@ function Home() {
 
 
           <div className="resume-buttons">
-            <a href="https://drive.google.com/file/d/156F_-yJEExTu2tWLWerQdH8DA5gfxZXx/view?usp=drive_linkhttps://drive.google.com/file/d/156F_-yJEExTu2tWLWerQdH8DA5gfxZXx/view?usp=drive_link" rel="noopener noreferrer" className="btn">
+            <a href="https://drive.google.com/file/d/1TLKcKBhZmTItly9P6IDSAjDXgojW0kPv/view" rel="noopener noreferrer" className="btn">
               <AiOutlineEye className="icon" /> View CV
             </a>
             <a href={resumeFile} download="resume.pdf" className="btn">

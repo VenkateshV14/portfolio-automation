@@ -100,7 +100,7 @@ NGINX acts as a reverse proxy:
 - `/send` → Node.js backend (running on port `5001`)  
 - SSL configured using **Certbot**  
 - Auto-renewal enabled via **cron**  
-- **Domain**: `venky-devops-engineer-vde.xyz`  
+- **Domain**: `venky-devops-engineer.online`  
 
 ---
 
